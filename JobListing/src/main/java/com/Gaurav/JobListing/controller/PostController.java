@@ -16,6 +16,11 @@ public class PostController {
     @Autowired
     SearchRepository srepo;
 
+    @RequestMapping("/")
+    public String home(){
+        return "index.jsp";
+    }
+
     @GetMapping("/posts")
     public List<Post> getAllPosts(){
 
